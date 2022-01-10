@@ -1,0 +1,231 @@
+@font-face {
+    font-family: RobotoLight;
+    src: url("fonts/roboto/Roboto-Light.ttf");
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes spin {
+    from { transform:rotate(0deg); }
+    to   { transform:rotate(360deg); }
+}
+
+main{
+    max-width:800px;
+    margin:0px auto;
+    font-family: RobotoLight, Arial, Helvetica, sans-serif;
+    animation: fadein 1s;
+}
+
+#top{
+    text-align: center;
+    margin-bottom: 10px;
+    background: #064477;
+    color: #fff;
+    padding: 5px;
+}
+#banner{
+    background-image: url("logo.png");
+    background-size:contain;    
+    background-repeat:no-repeat;
+    background-position: center center;
+    height:136px;
+}
+#top h1{
+    font-size: 60px;
+}
+#top p{
+    font-size:20px;
+    margin:10px 0px;
+}
+
+/* apps */
+#apps, #useful-links{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                            supported by Chrome, Edge, Opera and Firefox */
+}
+
+#apps{
+    text-align: center;
+    margin-bottom: 10px;
+}
+#apps .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 154px);
+    grid-auto-rows: 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+}
+.app-item{
+    text-align: center;
+    padding:5px;
+    border-radius:5px;
+    text-decoration: none;
+    color:rgb(24, 16, 16);
+}
+.app-item:hover{
+    background: #064477;
+    transition: background .1s ease-in;
+}
+.app-item:hover{
+    color:#fff;
+}
+.app-item .icon{
+    background-size: 64px;
+    height: 64px;
+    margin: 0px auto 5px auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.app-item .title{
+    font-weight: bold;
+    font-size:17px;
+}
+.app-item .description{
+    margin:5px 0px;
+    font-size: 15px;
+}
+
+
+
+/* documents */
+#documents .container{
+    background: #e6e6e6;
+    padding:5px 0px;
+}
+.document a{
+    text-decoration: none;
+    background: #e6e6e6 url(icons/office-push-pin-dark.svg) no-repeat 10px;
+    background-size: 16px;
+    padding: 0px 5px 0px 35px;
+    display: block;
+    color: #353535;
+    line-height: 23px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.document a:hover{
+    transition: background .1s ease-in;
+    color:#fff;
+    background: #064477 url(icons/office-push-pin-white.svg) no-repeat 10px;
+    background-size: 16px;
+}
+
+
+
+/* useful links */
+#useful-links .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    grid-auto-rows: 1fr;
+    grid-gap: 5px;
+    justify-content: center;
+}
+.useful-link{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color:#000;
+}
+/*.useful-link:hover{
+    background: #064477;
+    transition: background .1s ease-in;
+    color:#fff;
+}*/
+.useful-link .icon {
+    width:32px;
+    height: 32px;
+    background-size: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border:3px solid #000;
+    padding:5px;
+    border-radius: 5px;
+    margin:5px auto;
+}
+.useful-link .title {
+    font-size:17px;
+    font-weight: bold;
+}
+
+
+#stats{
+    font-style: italic;
+    text-align: center;
+    margin:10px 0px 0px 0px;
+}
+
+
+/* general styling */
+.section{
+    margin:5px 0px;
+}
+.section h1 {
+    position: relative;
+    font-size: 15px;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+.section h1:before, .section h1:after {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 50%;
+    height: 1px;
+    content: '\a0';
+    background-color: #000;
+}
+.section h1:before {
+    margin-left: -50%;
+    text-align: right;
+}
+.container{
+    margin:5px 0px 0px 0px;
+}
+
+/* tablet or larger, more space to use so utilize it */
+@media only screen and (min-width: 719.98px) {
+    main{
+        margin:10px auto;
+    }
+
+    #apps .container{
+        grid-template-columns: repeat(auto-fill, 170px);
+    }
+    .app-item .icon{
+        height: 128px;
+        width: 128px;
+        background-size: 128px;
+    }
+    .app-item .title{
+        font-size:20px;
+    }
+    .app-item .description{
+        margin:5px 0px;
+        font-size: 17px;
+    }
+
+    #useful-links .container{
+        grid-template-columns: repeat(auto-fill, 105px);
+    }
+    .useful-link .icon{
+        width: 64px;
+        height: 64px;
+        background-size: 64px;
+    }
+}

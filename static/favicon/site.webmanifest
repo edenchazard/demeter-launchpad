@@ -1,0 +1,19 @@
+{
+    "name": "DHS Launchpad",
+    "short_name": "DHS Launchpad",
+    "icons": [
+        {
+            "src": "static/favicon/android-chrome-192x192.png?v=693ejgn5Yr",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "static/favicon/android-chrome-256x256.png?v=693ejgn5Yr",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#064477",
+    "background_color": "#064477",
+    "display": "standalone"
+}
